@@ -102,7 +102,7 @@ const command = {
                                 updatedAt: new Date(),
                             });
                             if (interaction.guildId) {
-                                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `🗑️ **${interaction.user.username}** removed the **Item: ${item.title}** from ${scope} watch-list.`);
+                                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `🗑️ **<@${interaction.user.id}>** removed the **Item: ${item.title}** from ${scope} watch-list.`);
                             }
                         }
                         // Undo button
@@ -137,7 +137,7 @@ const command = {
                                         updatedAt: new Date(),
                                     });
                                     if (interaction.guildId) {
-                                        await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `↩️ **${interaction.user.username}** restored the **Item: ${backup.items.map(i => i.title).join(", ")}** from ${scope} watch-list.`);
+                                        await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `↩️ **<@${interaction.user.id}>** restored the **Item: ${backup.items.map(i => i.title).join(", ")}** from ${scope} watch-list.`);
                                     }
                                     undoBuffer.delete(backupKey);
                                     await undoInteraction.update({ content: `↩️ Undo successful! Restored **${backup.items.length}** item(s).`, components: [] });

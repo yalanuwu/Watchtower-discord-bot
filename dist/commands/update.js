@@ -110,7 +110,7 @@ const command = {
                         updatedAt: new Date(),
                     });
                     if (interaction.guildId) {
-                        await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `📌 **${interaction.user.username}** updated **STATUS : ${oldStatus} to ${newStatus}** of **ITEM : ${selectedItem.title}** from ${scope} watchlist.`);
+                        await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `📌 **<@${interaction.user.id}>** updated **STATUS : ${oldStatus} to ${newStatus}** of **ITEM : ${selectedItem.title}** from ${scope} watchlist.`);
                     }
                     await statusInteraction.editReply({
                         content: `✅ Updated **${selectedItem.title}** from **${oldStatus}** to **${newStatus}**.`,

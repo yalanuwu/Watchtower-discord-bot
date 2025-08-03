@@ -27,7 +27,7 @@ const command = {
                 updatedAt: new Date()
             });
             if (interaction.guildId) {
-                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `🗑️ **${interaction.user.username}** cleared the **${scope} watchlist**.`);
+                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `🗑️ **<@${interaction.user.id}>** cleared the **${scope} watchlist**.`);
             }
             await interaction.reply({ content: "✅ Your personal watchlist has been cleared.", ephemeral: true });
         }
@@ -54,7 +54,7 @@ const command = {
                 updatedAt: new Date()
             });
             if (interaction.guildId) {
-                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `🗑️ **${interaction.user.username}** cleared the **${scope} watchlist**.`);
+                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `🗑️ **<@${interaction.user.id}>** cleared the **${scope} watchlist**.`);
             }
             await interaction.reply({ content: "✅ Server watchlist has been cleared." });
         }

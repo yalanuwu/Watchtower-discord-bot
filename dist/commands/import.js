@@ -73,7 +73,7 @@ const command = {
                 details: { count: newItems.length }
             });
             if (interaction.guildId) {
-                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `📩 **${interaction.user.username}** imported in the **${scope}'s watchlist**.`);
+                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `📩 **<@${interaction.user.id}>** imported in the **${scope}'s watchlist**.`);
             }
             await interaction.editReply(`✅ Successfully imported **${newItems.length}** new item(s) into the ${scope} watchlist.`);
         }

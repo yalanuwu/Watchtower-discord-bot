@@ -81,7 +81,7 @@ const command: SlashCommand = {
       await sendLog(
         interaction.client,
         interaction.guildId!,
-        `📤 **${interaction.user.username}** exported the **${scope} watchlist**.`
+        `📤 **<@${interaction.user.id}>** exported the **${scope} watchlist**.`
       );}
 
     } catch (err) {

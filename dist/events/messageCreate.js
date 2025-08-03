@@ -144,7 +144,7 @@ exports.default = {
                     const client = message.client;
                     const guildId = message.guild?.id;
                     if (guildId) {
-                        await (0, logUtils_1.sendLog)(client, guildId, `📌 **${btn.user.username}** added **${details.title}** to the ${scope} watchlist.`);
+                        await (0, logUtils_1.sendLog)(client, guildId, `📌 **<@${btn.user.id}>** added **${details.title}** to the ${scope} watchlist.`);
                     }
                     await btn.update({ content: `✅ Added **${details.title}** as **${details.type.toUpperCase()}** to the ${scope} watchlist.`, embeds: [], components: [] });
                 }

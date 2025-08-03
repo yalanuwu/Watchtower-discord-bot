@@ -138,7 +138,7 @@ const command: SlashCommand = {
               await sendLog(
                 interaction.client,
                 interaction.guildId!,
-                `🗑️ **${interaction.user.username}** removed the **Item: ${item.title}** from ${scope} watch-list.`
+                `🗑️ **<@${interaction.user.id}>** removed the **Item: ${item.title}** from ${scope} watch-list.`
               );}
             }
 
@@ -186,7 +186,7 @@ const command: SlashCommand = {
                   await sendLog(
                     interaction.client,
                     interaction.guildId!,
-                    `↩️ **${interaction.user.username}** restored the **Item: ${backup.items.map(i => i.title).join(", ")}** from ${scope} watch-list.`
+                    `↩️ **<@${interaction.user.id}>** restored the **Item: ${backup.items.map(i => i.title).join(", ")}** from ${scope} watch-list.`
                   );}
 
                   undoBuffer.delete(backupKey);

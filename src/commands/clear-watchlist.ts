@@ -39,7 +39,7 @@ const command: SlashCommand = {
       await sendLog(
         interaction.client,
         interaction.guildId!,
-        `🗑️ **${interaction.user.username}** cleared the **${scope} watchlist**.`
+        `🗑️ **<@${interaction.user.id}>** cleared the **${scope} watchlist**.`
       );}
 
       await interaction.reply({ content: "✅ Your personal watchlist has been cleared.", ephemeral: true });
@@ -76,7 +76,7 @@ const command: SlashCommand = {
       await sendLog(
         interaction.client,
         interaction.guildId!,
-        `🗑️ **${interaction.user.username}** cleared the **${scope} watchlist**.`
+        `🗑️ **<@${interaction.user.id}>** cleared the **${scope} watchlist**.`
       );}
 
       await interaction.reply({ content: "✅ Server watchlist has been cleared." });

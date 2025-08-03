@@ -192,7 +192,7 @@ export default {
             await sendLog(
               client,
               guildId,
-              `📌 **${btn.user.username}** added **${details.title}** to the ${scope} watchlist.`
+              `📌 **<@${btn.user.id}>** added **${details.title}** to the ${scope} watchlist.`
             );
           }
 

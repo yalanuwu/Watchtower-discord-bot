@@ -64,7 +64,7 @@ const command = {
                 }
             });
             if (interaction.guildId) {
-                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `📤 **${interaction.user.username}** exported the **${scope} watchlist**.`);
+                await (0, logUtils_1.sendLog)(interaction.client, interaction.guildId, `📤 **<@${interaction.user.id}>** exported the **${scope} watchlist**.`);
             }
         }
         catch (err) {

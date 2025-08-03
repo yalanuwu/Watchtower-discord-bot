@@ -155,7 +155,7 @@ const command: SlashCommand = {
             await sendLog(
               interaction.client,
               interaction.guildId,
-              `📌 **${interaction.user.username}** updated **STATUS : ${oldStatus} to ${newStatus}** of **ITEM : ${selectedItem.title}** from ${scope} watchlist.`
+              `📌 **<@${interaction.user.id}>** updated **STATUS : ${oldStatus} to ${newStatus}** of **ITEM : ${selectedItem.title}** from ${scope} watchlist.`
             );
           }
 
