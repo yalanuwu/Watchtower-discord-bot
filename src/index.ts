@@ -6,6 +6,7 @@ import { ExtendedClient } from "./types/ExtendedClient";
 import messageCreate from "./events/messageCreate";
 import { processReminders } from "./utils/reminderSchedular";
 import { cleanupOldReminders } from "./utils/cleanupReminders";
+import express from 'express';
 
 config(); // Load .env
 
@@ -39,3 +40,10 @@ client.on("messageCreate", (...args) => messageCreate.execute(...args));
   await connectDB();
   await client.login(process.env.DISCORD_TOKEN);
 })();
+
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (_, res) => res.send("WatchTower Bot is running!"));
+app.listen(PORT, () => console.log(`🌐 Web server listening on port ${PORT}`));

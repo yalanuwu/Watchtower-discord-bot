@@ -10,6 +10,7 @@ const commandLoader_1 = require("./utils/commandLoader");
 const messageCreate_1 = __importDefault(require("./events/messageCreate"));
 const reminderSchedular_1 = require("./utils/reminderSchedular");
 const cleanupReminders_1 = require("./utils/cleanupReminders");
+const express_1 = __importDefault(require("express"));
 (0, dotenv_1.config)(); // Load .env
 const client = new (require("discord.js").Client)({
     intents: [discord_js_1.GatewayIntentBits.Guilds, discord_js_1.GatewayIntentBits.GuildMessages, discord_js_1.GatewayIntentBits.MessageContent],
@@ -35,3 +36,7 @@ client.on("messageCreate", (...args) => messageCreate_1.default.execute(...args)
     await (0, connect_1.connectDB)();
     await client.login(process.env.DISCORD_TOKEN);
 })();
+const app = (0, express_1.default)();
+const PORT = process.env.PORT || 3000;
+app.get("/", (_, res) => res.send("WatchTower Bot is running!"));
+app.listen(PORT, () => console.log(`🌐 Web server listening on port ${PORT}`));
