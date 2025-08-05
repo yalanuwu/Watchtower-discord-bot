@@ -60,7 +60,7 @@ It integrates with **TMDB** (The Movie Database) API to fetch accurate movie and
     npm install
         ```
 3. Create a .env file:
-  ```env
+  ```bash
     DISCORD_TOKEN=your-bot-token
     CLIENT_ID=your-client-id
     MONGODB_URI=your-mongodb-uri
