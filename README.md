@@ -54,30 +54,36 @@ It integrates with **TMDB** (The Movie Database) API to fetch accurate movie and
    ```bash
    git clone https://github.com/yourusername/WatchTower-bot.git
    cd WatchTower-bot
-    ```
-2. Install Dependencies:
-    ```bash
-    npm install
-        ```
-3. Create a .env file:
-  ```bash
-    DISCORD_TOKEN=your-bot-token
-    CLIENT_ID=your-client-id
-    MONGODB_URI=your-mongodb-uri
-    TMDB_API_KEY=your-tmdb-api-key
-    ```
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file:
+   ```env
+   DISCORD_TOKEN=your-bot-token
+   CLIENT_ID=your-client-id
+   MONGODB_URI=your-mongodb-uri
+   TMDB_API_KEY=your-tmdb-api-key
+   ```
+
 4. Build the project:
-    ```bash
-    npm run build
-        ```
+   ```bash
+   npm run build
+   ```
+
 5. Deploy slash commands:
-    ```bash
-    npm run deploy
-        ```
+   ```bash
+   npm run deploy
+   ```
+
 6. Start the bot:
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
+
 
 ---
 
