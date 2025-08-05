@@ -1,4 +1,6 @@
-![WatchTower Banner](assets/watchtowerBanner.gif)
+<p align="center">
+  <img src="assets/watchtowerBanner.gif" alt="WatchTower Bot Banner" />
+</p>
 
 
 # 🎬 WatchTower Bot
